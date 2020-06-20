@@ -1,0 +1,11 @@
+**/*.pyc
+/.idea
+**.cache
+**/__pycache__
+.cache
+*.cover
+.idea/
+.git/
+.mypy_cache
+.coverage
+ubex_autapi.egg-info
