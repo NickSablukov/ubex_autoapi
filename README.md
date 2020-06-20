@@ -24,7 +24,6 @@ http://127.0.0.1:8000/api/
 ```
 ubex_authapi
 ```
-- Run docker on you machine
 - Install python3.8 on you machine
 - Call command to run dev project
 ```bash
