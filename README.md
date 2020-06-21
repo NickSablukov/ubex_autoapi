@@ -1,6 +1,8 @@
 # Ubex test application
 Simple REST CRUD for all models in project
 
+![image](https://i.ibb.co/f9jSZ3G/2020-06-21-14-55-36.png)
+
 
 ### Get Started (with Docker)
 - Run postgres on you machine
