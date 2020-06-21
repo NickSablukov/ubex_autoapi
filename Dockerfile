@@ -1,6 +1,6 @@
 FROM python:3.8-alpine as base
 
-RUN apk add --no-cache alpine-sdk git postgresql-dev openssl-dev libxml2-dev \
+RUN apk add --no-cache alpine-sdk git npm postgresql-dev openssl-dev libxml2-dev \
     libxslt-dev openssh-client libffi-dev
 
 RUN pip3 install pip --upgrade

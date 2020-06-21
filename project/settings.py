@@ -81,9 +81,12 @@ class ProjectConfiguration(Configuration):
     USE_L10N = True
     USE_TZ = True
 
-    STATIC_URL = "/static/"
     REST_FRAMEWORK = {
         "DEFAULT_FILTER_BACKENDS": (
             "django_filters.rest_framework.DjangoFilterBackend",
         ),
     }
+
+    STATIC_ROOT = "static"
+    STATIC_URL = "/static/"
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "node_modules")]
