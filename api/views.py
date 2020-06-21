@@ -36,7 +36,7 @@ class ModelRegister:
 
     def _get_serializer_class(self, model: Type[Model]) -> Type:
         return type(
-            f"{model._meta.object_name}SerializerClass",
+            f"{model._meta.object_name}Serializer",
             (ModelSerializer,),
             {"Meta": self._get_static_meta(model)},
         )
