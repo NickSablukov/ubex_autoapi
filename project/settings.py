@@ -87,6 +87,3 @@ class ProjectConfiguration(Configuration):
             "django_filters.rest_framework.DjangoFilterBackend",
         ),
     }
-
-
-print(ProjectConfiguration().ALLOWED_HOSTS)
