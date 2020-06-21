@@ -18,7 +18,7 @@ class ProjectConfiguration(Configuration):
     )
 
     # static params
-    ALLOWED_HOSTS = ["*"] # no production
+    ALLOWED_HOSTS = ["*"]  # no production
     INSTALLED_APPS = [
         "django.contrib.admin",
         "django.contrib.auth",
