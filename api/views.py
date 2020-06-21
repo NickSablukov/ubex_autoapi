@@ -6,6 +6,7 @@ from django.urls import URLPattern
 from django_filters.filterset import filterset_factory
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.routers import DefaultRouter
 from rest_framework.serializers import ModelSerializer
 from rest_framework.viewsets import ModelViewSet
@@ -53,6 +54,7 @@ class ModelRegister:
             {
                 "serializer_class": self._get_serializer_class(model),
                 "filter_class": self._get_filter_class(model),
+                "pagination_class": LimitOffsetPagination,
                 "ordering_fields": "__all__",
                 "filter_backends": [DjangoFilterBackend, SearchFilter, OrderingFilter],
                 "queryset": model.objects.all(),
