@@ -11,9 +11,6 @@ class ProjectConfiguration(Configuration):
     # dynamic params
     DEBUG = values.BooleanValue(default=True, environ_prefix=SETTINGS_PREFIX)
     SECRET_KEY = values.Value(default="12456", environ_prefix=SETTINGS_PREFIX)
-    ALLOWED_HOSTS = values.ListValue(
-        default=["127.0.0.1", "localhost"], environ_prefix=SETTINGS_PREFIX
-    )
     # database
     DATABASES = values.DatabaseURLValue(
         default="postgres://postgres:postgres@127.0.0.1/ubex_authapi",
@@ -21,6 +18,7 @@ class ProjectConfiguration(Configuration):
     )
 
     # static params
+    ALLOWED_HOSTS = ["*"] # no production
     INSTALLED_APPS = [
         "django.contrib.admin",
         "django.contrib.auth",
@@ -89,3 +87,6 @@ class ProjectConfiguration(Configuration):
             "django_filters.rest_framework.DjangoFilterBackend",
         ),
     }
+
+
+print(ProjectConfiguration().ALLOWED_HOSTS)

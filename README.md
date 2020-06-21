@@ -39,4 +39,3 @@ http://127.0.0.1:8000/api/
 - DEBUG (default True, *since this project is not for launch in production, but ready to run*)
 - DATABASE_URL (default postgres://postgres:postgres@127.0.0.1/ubex_authapi)
 - SECRET_KEY (default 123456)
-- ALLOWED_HOSTS (default ["localhost", "127.0.0.1"])
