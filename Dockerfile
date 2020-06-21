@@ -14,5 +14,5 @@ ADD poetry.lock /app/
 RUN poetry install --no-dev --no-interaction --no-ansi -vvv
 
 ADD . /app
-
+EXPOSE 8000
 CMD ["poetry", "run", "gunicorn", "-c", "gunicorn.conf.py", "-b", "0.0.0.0:8000", "project.wsgi"]

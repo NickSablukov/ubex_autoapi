@@ -7,8 +7,8 @@ run_dev:
 
 run_dev_in_docker:
 	docker build -t ubex_autoapi . && \
-	docker run --rm ubex_autoapi sh -c "poetry run python manage.py migrate" && \
-	docker run --name ubex_autoapi --rm -e DEBUG=1 -p 8000:8000 ubex_autoapi sh -c "poetry run python manage.py runserver"
+	docker run --rm --network=host ubex_autoapi sh -c "poetry run python manage.py migrate" && \
+	docker run -p 8000:8000 --name ubex_autoapi --rm ubex_autoapi
 
 format_code:
 	poetry run isort -y
